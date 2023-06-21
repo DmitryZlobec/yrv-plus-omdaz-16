@@ -34,6 +34,7 @@ Minimal version of GCC should be 12.1.0
 ## Serial port:
 Original serial port https://github.com/fpga-logi/logi-pong-chu-examples/tree/master/pong-chu-logi-edu-examples-verilog
 https://onlinelibrary.wiley.com/doi/epdf/10.1002/9780470374283.ch8
+https://www.youtube.com/shorts/iWDif9F_Z_U
 
 ## Related books:
 "Inside An Open-Source Processor" ISBN 978-3-89576-443-1 Author, Monte Dalrymple
