@@ -142,7 +142,9 @@ module top
   reg     [7:0] char[0:2047];
   initial $readmemh("char.mem8", char);
 
-  reg     [7:0] text_mem[0:4799];
+  reg     [7:0] text_mem_0[0:2399];
+  reg     [7:0] text_mem_1[0:2399];
+
   // initial $readmemh("text.mem8", text_mem);
 
   assign vga_wr_byte_0 = {4{vga_wr_reg_0}} & mem_ble_reg & {4{mem_ready}};
@@ -412,12 +414,18 @@ module top
       end
   end
 
-always_ff @ (posedge vga_clock) begin        
-          if (vga_wr_byte_0[1]) text_mem[{mem_addr_reg[12:1],1'b1}] <= mem_wdata[15:8];
-          else if (vga_wr_byte_0[0]) text_mem[{mem_addr_reg[12:1],1'b0}] <= mem_wdata[7:0]; 
-          else  begin
-             character<= text_mem[text_symbol];
-          end 
+always_ff @ (posedge vga_clock) begin       
+              if( vga_wr_byte_0[0] || vga_wr_byte_0[1] ) begin
+                if (vga_wr_byte_0[1]) text_mem_1[mem_addr_reg[12:1]] <= mem_wdata[15:8];
+                if (vga_wr_byte_0[0]) text_mem_0[mem_addr_reg[12:1]] <= mem_wdata[7:0];                       
+              end
+              else
+                begin
+                    if(text_symbol[0])
+                      character<= text_mem_1[text_symbol[12:1]];
+                    else
+                      character<= text_mem_0[text_symbol[12:1]];
+                end
   end
 
   wire  [10:0] row_in_ram;
