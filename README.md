@@ -55,8 +55,15 @@ and
 
 rustup targe add riscv32i-unknown-none-elf
 
+to build:
+
 cargo objcopy --release -- -O binary app.bin
 
 python bin2hex/freedom-bin2hex.py -w16 app.bin >code.mem16
 
+
+To load in FPGA
+
 load.bat 
+
+
