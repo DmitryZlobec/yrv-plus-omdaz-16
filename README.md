@@ -45,3 +45,18 @@ https://www.youtube.com/shorts/iWDif9F_Z_U
 "Modern C." Manning, 2019, 9781617295812. ffhal-02383654 Jens Gustedt. 
 
 FPGA Prototyping by Verilog Examples Author(s):Pong P. Chu First published:11 June 2008
+
+###YRV directory
+Contains Rust code of riscv_rt crate
+
+You need to install cargo binutils
+
+and
+
+rustup targe add riscv32i-unknown-none-elf
+
+cargo objcopy --release -- -O binary app.bin
+
+python bin2hex/freedom-bin2hex.py -w16 app.bin >code.mem16
+
+load.bat 
