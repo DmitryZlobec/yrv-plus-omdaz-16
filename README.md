@@ -55,7 +55,7 @@ and
 
 __rustup targe add riscv32i-unknown-none-elf__
 
-to build:
+to build run in __app__:
 
 __cargo objcopy --release -- -O binary app.bin__
 
