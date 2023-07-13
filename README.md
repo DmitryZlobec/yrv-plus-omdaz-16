@@ -49,21 +49,21 @@ FPGA Prototyping by Verilog Examples Author(s):Pong P. Chu First published:11 Ju
 ## YRV directory
 Contains Rust code of riscv_rt crate
 
-You need to install cargo binutils
+You need to install __cargo binutils__
 
 and
 
-rustup targe add riscv32i-unknown-none-elf
+__rustup targe add riscv32i-unknown-none-elf__
 
 to build:
 
-cargo objcopy --release -- -O binary app.bin
+__cargo objcopy --release -- -O binary app.bin__
 
-python bin2hex/freedom-bin2hex.py -w16 app.bin >code.mem16
+__python bin2hex/freedom-bin2hex.py -w16 app.bin >code.mem16__
 
 
 To load in FPGA
 
-load.bat 
+__load.bat__
 
 
