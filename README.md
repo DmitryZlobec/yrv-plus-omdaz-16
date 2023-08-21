@@ -1,4 +1,4 @@
-# 16bit YRV-Plus RISC-V CPU for OMDAZZ board with VGA PS/2 keyboard and Serial port
+# 16bit YRV-Plus RISC-V CPU for OMDAZZ board with  PS/2 keyboard and Serial port
 
 ## Scripts description
 In  Plus/boards/omdazz/ run
@@ -28,8 +28,6 @@ Toolchain shoul be installed in:  _/opt/riscv_native
 
 Minimal version of GCC should be 12.1.0
 
-## Tetris game 
-![ASCII Tetris game](/tetris.jpg "Tetris")
 
 ## Serial port:
 To use serial port switch on S1 jumper
