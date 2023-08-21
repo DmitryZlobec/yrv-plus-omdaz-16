@@ -43,12 +43,6 @@
 
 /* processor                                                                               */
 `include "yrv_top.v"
-/* serial receive                                                                          */
-`include "serial_rx.v"
-/* serial transmit                                                                         */
-`include "serial_tx.v"
-/* serial port                                                                             */
-`include "serial_top.v"
 
 `ifdef INSTANCE_MEM
 /* instantiated memory                                                                     */
@@ -153,7 +147,7 @@ module yrv_mcu  (debug_mode, port0_reg, port1_reg, port2_reg, port3_reg, ser_clk
 //   wire   [31:0] mem_rdata;                                 /* raw read data                */
 // `else
   wire    [3:0] mem_wr_byte;                               /* system ram byte enables      */
-	reg     [7:0] mcu_mem [0:1024*16];                          /* system ram                   */
+	reg     [7:0] mcu_mem [0:1024*24];                          /* system ram                   */
   reg    [31:0] mem_rdata;                                 /* raw read data                */
 // `endif
 
