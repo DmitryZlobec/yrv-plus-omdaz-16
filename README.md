@@ -1,4 +1,4 @@
-# 16bit YRV-Plus RISC-V CPU for OMDAZZ board with  PS/2 keyboard and Serial port
+# 16bit YRV-Plus RISC-V CPU for OMDAZZ board with  PS/2 port and Serial port
 
 ## Scripts description
 In  Plus/boards/omdazz/ run
