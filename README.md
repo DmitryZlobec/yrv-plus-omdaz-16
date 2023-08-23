@@ -60,7 +60,11 @@ to build run in __app__:
 __cargo objcopy --release -- -O binary app.bin__
 
 
+
+
+
  __rustup toolchain install nightly__
+ __rustup override set nightly__
 
 __cargo build -Z build-std=core --target riscv32ic-unknown-none-elf.json --release__
 
