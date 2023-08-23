@@ -82,6 +82,7 @@ __python bin2hex/freedom-bin2hex.py -w16 app.bin >code.mem16__
 
 rustc -Z unstable-options --target=riscv32imac-unknown-none-elf --print target-spec-json
 
+riscv-none-elf-objcopy.exe  -O binary ../target/riscv32ic-unknown-none-elf/release/app  app.bin
 
 To load in FPGA
 
