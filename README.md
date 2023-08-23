@@ -49,6 +49,16 @@ FPGA Prototyping by Verilog Examples Author(s):Pong P. Chu First published:11 Ju
 ## YRV directory Rust directory
 Contains Rust code of riscv_rt crate
 
+```
+$ mkdir .cargo && edit .cargo/config && cat $_
+[target.riscv32ic-unknown-none-elf]
+rustflags = [
+  "-C", "link-arg=-Tlink.x"
+]
+
+[build]
+target = "riscv32ic-unknown-none-elf"
+```
 You need to install __cargo binutils__
 
 and
