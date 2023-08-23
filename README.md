@@ -59,6 +59,9 @@ to build run in __app__:
 
 __cargo objcopy --release -- -O binary app.bin__
 
+
+ __rustup toolchain install nightly__
+
 __cargo build -Z build-std=core --target riscv32ic-unknown-none-elf.json --release__
 
 __python bin2hex/freedom-bin2hex.py -w16 app.bin >code.mem16__
